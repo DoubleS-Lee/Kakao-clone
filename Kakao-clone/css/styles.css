@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+@import "reset.css";
+@import "status-bar.css";
+@import "header.css";
+@import "nav-bar.css";
+@import "friend.css";
+@import "friends.css";
+@import "find.css";
+@import "more.css";
+@import "settings.css";
+@import "chat.css";
+@import "mobile.css";
+
+/* 모든 스타일에 적용할 property 선언 */
+/* 모든 element에 기본 적용하는 것으로 하자 */
+/* padding은 추가하지만 박스크기는 더 크게 만들지 말아줘! 라는 명령 */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  padding: 10px 20px;
+  color: #020202;
+  font-family: "Open Sans";
+}
+
+a {
+  /* 컬러를 부모의 컬러와 동일하게 하겠다는 뜻 */
+  /* 더이상 눌러도 보라색으로 바뀌지 않는다 */
+  color: inherit;
+  /* 링크에 밑줄을 없애는 방법 */
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* main 태그에 fadeIn에 설정해놓은 @keyframe을 적용한다 */
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}

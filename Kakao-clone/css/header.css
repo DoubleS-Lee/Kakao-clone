@@ -1,0 +1,34 @@
+.header {
+  /*각 요소들을 한 행으로 배치하기 위함*/
+  display: flex;
+  /*아이콘과 p1이 붙어있는데 이 둘을 떨어뜨려놓기 위해 사용*/
+  justify-content: space-between;
+  margin-bottom: 30px;
+  /* margin-top: 50px; */
+
+  /*같은 행끼리 있는 요소들을 중앙 정렬시킨다.*/
+  align-items: center;
+}
+
+.header .header__title {
+  font-size: 24px;
+  /* font-weight는 두께를 말하는데 이건 구글 폰트에서 다운받은 값을 써준다 */
+  font-weight: 700;
+}
+
+.header .header__icon {
+  font-size: 20px;
+  margin-left: 20px;
+  /* 마우스를 hover 했을때 커서의 모양이 손모양으로 바뀌게 됨*/
+  cursor: pointer;
+}
+
+.header .header__header-column {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__back-btn {
+  font-size: 22px;
+  margin-right: 20px;
+}
