@@ -1,0 +1,59 @@
+.nav {
+  /* position: fixed;는 width와 height가 필요하다 */
+  /* 없으면 작동을 안 함 */
+  position: fixed;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: #fcfcfc;
+  bottom: 0px;
+  left: 0px;
+  border-top: 1px solid #f7f7f7;
+  box-sizing: border-box;
+}
+
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav i {
+  font-size: 20px;
+}
+
+.nav .nav__list-link {
+  position: relative;
+}
+
+/* .nav .nav__badge는 absolute로 설정하고
+.nav .nav__badge의 부모인 .nav .nav__list-link는 relative로 해야한다 */
+.nav .nav__badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  color: white;
+  background-color: #dc5d46;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 박스를 동그라미 형태로 만들려면 width와 height의 반절값을 주면 된다 */
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+@keyframes showNavBar {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.nav {
+  transform: translateY(80px);
+  animation: showNavBar 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
