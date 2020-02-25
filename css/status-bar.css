@@ -1,0 +1,16 @@
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  /*투명도 설정*/
+  opacity: 0.7;
+}
+
+/* .status-bar i는 status-bar 클래스내에 있는 i 태그를 선택한다는 뜻 */
+.status-bar i {
+  font-size: 14px;
+}
+
+.status-bar .status-bar__battery-level {
+  margin-left: 5px;
+}
